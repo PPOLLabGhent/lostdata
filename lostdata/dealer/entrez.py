@@ -6,7 +6,7 @@ References:
 - https://www.ncbi.nlm.nih.gov/home/develop/api/
 - ftp://ftp.ncbi.nih.gov/gene/
 """
-from lostdata import retrieveSources,cacheableTable,processedDataStorage
+from lostdata.processing import retrieveSources,cacheableTable,processedDataStorage
 import os, gzip, pandas as pd
 from io import TextIOWrapper, StringIO
 from urllib.parse import parse_qsl

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-import lostdata as LSD
+from lostdata.processing import storeDatasetLocally
 import pandas as pd, numpy as np
 
-@LSD.storeDatasetLocally
+@storeDatasetLocally
 def get_UHRprofiles():
     """
     PDP meta cnv dataset from Ultra High Risk project. 
@@ -12,7 +12,8 @@ def get_UHRprofiles():
     """
     from lostdata.dealer.entrez import get_lift19to38
     from bidali.seqanalysis import get_centromeres #TODO move get_centromeres to lostdata to avoid circular dependency
-    datacn = LSD.expanduser("~/LSData/profiles_UHR/")
+    import lostdata as LSD
+    datacn = "/code/nb_ranking/InputData/profiles_UHR/"
     centromereshg38 = get_centromeres()
     lo = get_lift19to38()
     

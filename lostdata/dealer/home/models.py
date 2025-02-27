@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 import os
+from lostdata.processing import storeDatasetLocally
 import lostdata as LSD
 import pandas as pd, numpy as np
 
-privatedir = LSD.config['LSD']['privatedir']
+#privatedir = LSD.config['LSD']['privatedir']
+#privatedir = LSD.config.config.get('LSD', 'privatedir') # Changed
+privatedir = "/code/nb_ranking/InputData/"
 
-@LSD.storeDatasetLocally
+@storeDatasetLocally
 def get_THMYCN():
     """
     Source: ~/LSData/private/2015_Hyperplasia_ABC/uniData.tx

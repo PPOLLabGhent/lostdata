@@ -5,6 +5,7 @@ This module organizes the configuration for the lostdata package
 
 Todo:
     * Give example symlinking privatedir ln -s ~/Dropbiz/Lab/z_archive/Datasets ~/LSData/private
+    * Change this to a more general folder: code/nb_ranking/InputData
 """
 
 import configparser, os, appdirs
@@ -30,7 +31,8 @@ config = configparser.ConfigParser()
 config['LSD'] = {
     'cachetime': '4w', #supports w[eeks], d[ays] or h[ours]
     'cachedir': os.path.join(appdatadir, 'cache'),
-    'privatedir': os.path.join(appdatadir, 'private')
+    #'privatedir': os.path.join(appdatadir, 'private')
+    'privatedir': 'code/nb_ranking/InputData'
 }
 
 # Read configuration file
