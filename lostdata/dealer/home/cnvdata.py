@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from lostdata.processing import storeDatasetLocally
+from lostdata.formats import Dataset
 import pandas as pd, numpy as np
 
 @storeDatasetLocally
@@ -42,5 +43,5 @@ def get_UHRprofiles():
     #profsperMYCNstatus[0].mean()
     #(profsperMYCNstatus[0].var())**.5
 
-    return LSD.Dataset(profiles=profiles,metadata=samples)
+    return Dataset(profiles=profiles,metadata=samples)
     
