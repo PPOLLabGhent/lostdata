@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 from lostdata.processing import storeDatasetLocally
+from lostdata.formats import Dataset
 import lostdata as LSD
 import pandas as pd, numpy as np
 
