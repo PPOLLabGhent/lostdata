@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import os
 from lostdata.processing import storeDatasetLocally
+#import lostdata as LSD
 from lostdata.formats import Dataset
-import lostdata as LSD
 import pandas as pd, numpy as np
 
 #privatedir = LSD.config['LSD']['privatedir']
@@ -51,6 +51,6 @@ def get_THMYCN():
         )
     thcoeffs['lineardiff'] = thcoeffs['genotypeTG:age']-thcoeffs['genotypeWT:age']
 
-    return LSD.Dataset(exprData=thdata,
-                       metadata=thannot,
-                       lmCoeffs=thcoeffs)
+    return Dataset(exprData=thdata,
+                   metadata=thannot,
+                   lmCoeffs=thcoeffs)
